@@ -1,0 +1,8 @@
+body {
+    font-size: small;
+    display: block; 
+    margin: 0 auto;
+    color: #222;
+    font-family: arial, sans-serif;
+    height: 100%;
+}
