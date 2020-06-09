@@ -1,6 +1,7 @@
 :root {
     --google-gray-bg: #f1f1f1;
     --google-gray-text: #5F6368;
+    --google-gray-border: #e4e4e4;
 }
 
 html, body {
@@ -32,7 +33,6 @@ main {
     margin: auto;
     padding-top: 100px;
     display: flex;
-    border: 1px solid red;
     flex-direction: column;
     margin: auto;
     align-items: center;
@@ -43,10 +43,10 @@ footer {
     display: flex;
     flex: 1;
     justify-self: flex-end;
-    border: 1px solid blue; 
     padding: 10px;
     min-width: 600px;
     background-color: var(--google-gray-bg);
+    border-top: 1px solid var(--google-gray-border);
     color: var(--google-gray-text);
 }
 
@@ -76,6 +76,9 @@ ul, li {
     padding: 0;
 }
 
+.section {
+    margin: 15px;
+}
 
 
 #logo {
@@ -89,12 +92,17 @@ ul, li {
 #search-bar {
     flex: auto;
     display: flex;
+    justify-content: space-between;
     flex-direction: row;
-    border: 1px solid var(--google-gray-bg);
-    padding: 8px;
+    border: 1px solid var(--google-gray-border);
     border-radius: 50px;
     width: 400px;
     align-items: center;
+    height: 34px;
+}
+
+#search-bar:hover {
+    box-shadow: 0px 0px 4px var(--google-gray-border);
 }
 
 .search-icon {
@@ -103,16 +111,26 @@ ul, li {
 }
 
 input {
+    display: flex;
+    flex: 1;
     margin: 0;
     padding: 0;
-    width: 80%;
-    height: 25px;
+    height: 30px;
+    width: 320px;
+    border: none;
 }
 
 button {
     border: none;
     background-color: var(--google-gray-bg);
-    border-radius: 3px;
-    padding: 5px 10px 5px 10px;
+    border-radius: 4px;
+    padding: 8px 10px 8px 10px;
+    margin: 0px 5px 0px 5px;
     color: var(--google-gray-text);
+}
+
+button:hover {
+    border: 1px solid var(--google-gray-text);
+    color: black;
+    margin: -1px 4px -1px 4px;
 }
